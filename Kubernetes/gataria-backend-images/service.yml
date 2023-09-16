@@ -8,5 +8,5 @@ spec:
     app: gataria-frontend
   ports:
     - port: 80
-      targetPort: 3000
-      nodePort: 30000
+      targetPort: 3020
+      nodePort: 30020
