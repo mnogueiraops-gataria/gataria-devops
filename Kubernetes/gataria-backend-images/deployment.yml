@@ -20,5 +20,5 @@ spec:
         ports:
         - containerPort: 3020
           env:
-      - name: CATAPI_URL
-      value: "https://api.thecatapi.com/v1/images/search"
+          - name: CATAPI_URL
+            value: "https://api.thecatapi.com/v1/images/search"
