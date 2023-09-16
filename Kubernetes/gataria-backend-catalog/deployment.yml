@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gataria-backend-catalog
+  labels:
+    app: gataria-backend-catalog
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gataria-backend-catalog
+  template:
+    metadata:
+      labels:
+        app: gataria-backend-catalog
+    spec:
+      containers:
+      - name: gataria-backend-catalog
+        image: mnogueiraops/gataria-backend-catalog:dev
+        ports:
+        - containerPort: 3010
