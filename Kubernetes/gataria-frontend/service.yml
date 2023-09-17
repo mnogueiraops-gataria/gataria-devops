@@ -3,10 +3,9 @@ kind: Service
 metadata:
   name: frontend-service
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: gataria-frontend
   ports:
     - port: 80
       targetPort: 3000
-      nodePort: 30000
