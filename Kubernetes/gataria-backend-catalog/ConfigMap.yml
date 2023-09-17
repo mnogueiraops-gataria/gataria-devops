@@ -1,9 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: gataria-configmap
-  namespace: dev
-data:
-  # chaves com valores de propriedades; cada chave mapeia para um valor avulso
-  MONGO_DATABASE: "dev"
-  CATAPI_URL: "https://api.thecatapi.com/v1/images/search"
