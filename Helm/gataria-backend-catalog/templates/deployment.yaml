@@ -48,10 +48,10 @@ spec:
             secretKeyRef:
               name: gataria-secret
               key: MONGO_URL    
-          # livenessProbe:
-          #   httpGet:
-          #     path: /
-          #     port: http
+           livenessProbe:
+             httpGet:
+               path: /
+               port: http
           # readinessProbe:
           #   httpGet:
           #     path: /
