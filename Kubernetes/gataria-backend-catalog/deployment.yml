@@ -19,14 +19,14 @@ spec:
         image: mnogueiraops/gataria-backend-catalog:dev
         ports:
         - containerPort: 3010
-      env:
+        env:
         - name: MONGO_DATABASE
           valueFrom:
             configMapKeyRef:
               name: gataria-configmap
               key: MONGO_DATABASE
         - name: MONGO_URL
-          valueFrom: 
+          valueFrom:
             secretKeyRef:
               name: gataria-secret
               key: MONGO_URL
