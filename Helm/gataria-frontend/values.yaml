@@ -53,8 +53,8 @@ ingress:
         - path: /
           pathType: Prefix
   tls: 
-    hosts:
-      - gataria.mnogueira.cloud
+      hosts:
+        - gataria.mnogueira.cloud
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
