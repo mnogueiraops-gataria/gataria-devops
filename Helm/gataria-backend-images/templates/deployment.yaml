@@ -38,11 +38,11 @@ spec:
               containerPort: {{ .Values.service.port }}
               protocol: TCP
           env:
-         - name: CATAPI_URL
-           valueFrom:
-             configMapKeyRef:
-               name: gataria-configmap
-               key: CATAPI_URL    
+           - name: CATAPI_URL
+             valueFrom:
+               configMapKeyRef:
+                name: gataria-configmap
+                key: CATAPI_URL    
           livenessProbe:
             httpGet:
               path: /
