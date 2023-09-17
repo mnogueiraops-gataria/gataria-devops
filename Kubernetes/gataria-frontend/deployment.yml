@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: gataria-frontend
-        image: mnogueiraops/gataria-frontend:dev
+        image: mnogueiraops/gataria-frontend:alpineprodtest
         ports:
         - containerPort: 3000
