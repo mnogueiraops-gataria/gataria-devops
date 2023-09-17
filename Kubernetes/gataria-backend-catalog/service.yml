@@ -3,10 +3,9 @@ kind: Service
 metadata:
   name: catalog-service
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: gataria-backend-catalog
   ports:
     - port: 80
       targetPort: 3010
-      nodePort: 30010
