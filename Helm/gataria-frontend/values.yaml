@@ -41,8 +41,8 @@ service:
   port: 80
 
 ingress:
-  enabled: tr
-  className: ""
+  enabled: true
+  className: "gataria-frontingress"
   annotations: 
      kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
