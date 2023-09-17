@@ -37,15 +37,21 @@ spec:
             - name: http
               containerPort: {{ .Values.service.port }}
               protocol: TCP
+          env:
+         - name: CATAPI_URL
+           valueFrom:
+             configMapKeyRef:
+               name: gataria-configmap
+               key: CATAPI_URL    
           livenessProbe:
             httpGet:
               path: /
               port: http
-          readinessProbe:
-            httpGet:
-              path: /
-              port: http
-          resources:
+          #readinessProbe:
+            #httpGet:
+              #path: /
+              #port: http
+          #resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
